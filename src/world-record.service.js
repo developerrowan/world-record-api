@@ -9,6 +9,8 @@ const getWorldRecordByTwitchGame = (game) => {
                     return resolve(false);
                 }
     
+                const game = Object.keys(worldRecords)[0];
+
                 let wr = worldRecords[Object.keys(worldRecords)[0]];
 
                 const category = Object.keys(wr)[0];
@@ -22,6 +24,7 @@ const getWorldRecordByTwitchGame = (game) => {
     
                 return resolve({
                     category,
+                    game,
                     player,
                     time,
                     timeInSeconds,
