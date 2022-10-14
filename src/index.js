@@ -19,7 +19,7 @@ app.get('/worldrecord/:gameName', (req, res) => {
             return;
         }
 
-        res.json([worldRecord]);
+        res.json(worldRecord);
     });
 });
 
