@@ -19,7 +19,8 @@ app.get('/worldrecord/:gameName', (req, res) => {
             return;
         }
 
-        res.json(worldRecord);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(worldRecord));
     });
 });
 
