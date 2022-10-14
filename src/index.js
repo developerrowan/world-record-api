@@ -15,7 +15,7 @@ app.get('/worldrecord/:gameName', (req, res) => {
 
     getWorldRecordByTwitchGame(gameName).then((worldRecord) => {
         if(worldRecord === false) {
-            res.status(500).send('Failed to fetch world record.');
+            res.json({});
             return;
         }
 
